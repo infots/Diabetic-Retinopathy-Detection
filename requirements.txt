@@ -1,0 +1,7 @@
+tensorflow
+keras
+flask
+flask-uploads==0.2.1
+pillow
+werkzeug==0.16.0
+
