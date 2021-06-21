@@ -1,0 +1,88 @@
+
+body {
+    margin: 0;
+    margin-top: 50px;
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    line-height: 50px;
+    background-color: #eee;
+}
+
+header * {
+    display: inline;
+    
+    height: 50px;
+    
+}
+
+header ul {
+    padding: 0;
+}
+
+header li {
+    margin-left: 50px ;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+section {
+    height: 100vh;
+    border: 1px solid black;
+    display: flex;
+    justify-content: left;
+    align-items: html;
+    text-align: html;
+    width: 100%;
+    background-size: cover; /* Add this line */
+    background-position: center center; /* Add this line */
+    background-repeat: no-repeat; /* Add this line */
+    background-attachment: fixed; /* Add this line */
+}
+#p1 h1{
+    text-align: center;
+    padding-left: 60px;
+    font-size: 40px;
+}
+#p1 img{
+    /*padding-left: 400px;*/
+    margin-left: 50px;
+    border-radius: 30%;
+    border: 5px solid black;
+    float: left;
+    margin-top: 30px;
+}
+
+
+
+#hero .profile-img {
+    width: 100px;
+    border-radius: 50%;
+}
+/*header color*/
+header a {
+    text-decoration: none;
+    color: rgba(23, 7, 253, 0.973);
+}
+footer {
+    text-align: center;
+    padding: 50px;
+    background-color:#eee;
+}
+
+/* background images */
+
+#p1 {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.452),rgba(255, 255, 255, 0.459)), url('https://upload.wikimedia.org/wikipedia/commons/6/65/Eye_iris.jpg');
+}
+
+#p2 {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.473),rgba(255, 255, 255, 0.432)), url('https://upload.wikimedia.org/wikipedia/commons/6/65/Eye_iris.jpg');
+}
