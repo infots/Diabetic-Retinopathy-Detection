@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <style>
+            
+body {
+    margin: 0;
+    margin-top: 50px;
+    font-family: sans-serif;
+    background-color: rgb(184, 228, 210);
+}
+
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    line-height: 50px;
+    background-color: black;
+}
+
+header * {
+    display: inline;
+    
+    height: 50px;
+    
+}
+
+header ul {
+    padding: 0;
+}
+
+header li {
+    margin-left: 50px ;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+section {
+    height: 100vh;
+    border: 1px solid black;
+    display: flex;
+    justify-content: left;
+    align-items: html;
+    text-align: html;
+    width: 100%;
+    background-size: cover; /* Add this line */
+    background-position: center center; /* Add this line */
+    background-repeat: no-repeat; /* Add this line */
+    background-attachment: fixed; /* Add this line */
+}
+#p1 h1{
+    text-align: center;
+    padding-left: 60px;
+    font-size: 40px;
+}
+#p1 img{
+    /*padding-left: 400px;*/
+    margin-left: 50px;
+    border-radius: 30%;
+    border: 5px solid black;
+    float: left;
+    margin-top: 30px;
+}
+
+
+
+#hero .profile-img {
+    width: 100px;
+    border-radius: 50%;
+}
+/*header color*/
+header a {
+    text-decoration: none;
+    color: rgba(23, 7, 253, 0.973);
+}
+footer {
+    text-align: center;
+    padding: 50px;
+    background-color:#eee;
+}
+
+
+        </style>
+    
+     <body style="background-color:#E5E4E2;">
+        <title>DR DETECTION</title>
+       <!-- <link href="style.css" rel="stylesheet"type="text/css"> -->
+                  <center><h1>St.Vincent Pallotti College of Engineering & Technology</h1><center>
+                    <center><h1>Leadingindia.ai Bennet University</h1></center>
+       
+    </head>
+        <body>
+         <header>
+           
+            <nav>
+ 
+                <ul>
+                    <li><a href="#p1" style="color: white"><b>Home</b></a></li>
+                    <li><a href="#p2" style="color: white"><b>Upload</b></a></li>
+                    <li><a href="#p3" style="color: white"><b>About</b></a></li>
+                    <li><a href="#p4" style="color: white"><b>Help</b></a></li>
+                    
+                </ul>
+            </nav> 
+        </header>
+        <main>
+            <section id="p1">
+                <div class="section-inner">
+                    <center><h1><u>DIABETIC RETINOPATHY DETECTION</u></h1></center>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Eye_iris.jpg" class="profile-img" height="400" width="300"border="5">
+                    <p style="padding-left: 500px; margin-top: 90px; font-size: 23px;">Worldwide, diabetic retinopathy is the leading cause of blindness among working-aged adults.
+                    The global burden of diabetic retinopathy includes:
+                        <li style="padding-left: 500px; font-size: 23px; ">387 million people with diabetes mellitus (DM) in the world, estimated to increase to 592 million people in 2035.</li>
+                        <li style="padding-left: 500px;font-size: 23px;">93 million people with diabetic retinopathy</li>
+                        <li style="padding-left: 500px;font-size: 23px;">Affects 1 out of 3 persons with diabetes mellitus</li>
+                        <li style="padding-left: 500px;font-size: 23px;">Proliferative diabetic retinopathy (PDR): 17 million people</li>
+                        <li style="padding-left: 500px;font-size: 23px;">Diabetic macular edema: 21 million people</li>
+                        <li style="padding-left: 500px;font-size: 23px;">Vision-threatening diabetic retinopathy: 28 million people</li></p>
+                </div>
+            </section>
+             <section id="p2">
+                <div class="section-inner">
+                    <form method=POST enctype=multipart/form-data action="{{ url_for('upload') }}">
+                        <br>
+                        
+                        <h1><b><center>UPLOAD IMAGE HERE..<b></h1></center>
+                        <br>
+                        <img src="{{ user_image }}" alt="User Image" height="300" width="300"border="2">
+                        <input type=file name=photo>
+                        <input type="submit">
+                                {%- for category, message in get_flashed_messages(with_categories = true) %}
+                        <div class = "alert alert-danger">
+                                {{ message }}
+                        </div>
+                        {%- endfor %}
+		            </form>
+                </div>
+             </section>
+            <section id="p3">
+                <div class="section-inner">
+                    <center><h1><u> ABOUT DIABETIC RETINOPATHY DETECTION</u></h1></center>
+                    
+                    <p style="padding-left: 500px; margin-top: 90px; font-size: 23px;">
+                    Diabetes is a public health concern in India and diabetic retinopathy (DR) is an emerging cause of visual impairment and blindness. Approximately 3.35–4.55 million people with diabetic retinopathy are at risk of vision-threatening DR (VTDR) in India. More than 2/3 of India's population resides in rural areas where penetration of modern medicine is mostly limited to the government public health system. Despite the increasing magnitude, there is no systematic screening for the complications of diabetes, including DR in the public health system.</p>
+            </section> 
+           <section id="p4">
+                <div class="section-inner">
+                    <center><h1>HELP</h1></center>
+                    <ul>
+                        <li>Click on "choose file"and use must only RETINAL SCAN IMAGE</li>
+                        <li>Click on Submit Button</li>
+                        <li>Then you will get the result of your uploaded Image</li>
+                        <li>You will get result according to your uploaded image</li>
+                     </ul>
+</DIV>
+</section>
+
+                    
+                  
+</main>
+       
+    </body>
+</html>
